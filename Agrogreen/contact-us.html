@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us - Agro Green Alex</title>
+    <link rel="stylesheet" href="contact-us.css">
+    <link rel="stylesheet" href="bootstrap5.1.3.css">
+    <link rel="icon" href="logo.jpg">
+    <link rel="apple-touch-icon" href="logo.jpg" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-xl navbar-light bg-gradient" style="background-color:white ;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><img src="logo.jpg" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-success" aria-current="page" href="index.html">Home</a>
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Our products
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Frozen</a></li>
+                  <li><a class="dropdown-item" href="#">In brine</a></li>
+                  <li><a class="dropdown-item" href="#">Fresh</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Galary</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact-us.html">Contact us</a>
+              </li>
+            </ul>
+           
+          </div>
+        </div>
+      </nav>    
+<main>
+<main>
+<div class="contact-us">
+    <h1 class="contact-com">Contact us</h1>
+    <br>
+    <a href="index.html" class="home-bt">Home</a>
+
+</div>
+</main>
+<main class="father-main-contact-container">
+    <div class="main-contact-container">
+        <div class="contact-father">
+            <div class="location"><img src="icon/google-maps.png"></div>
+            <div class="location-info"><p>Kafr Eldwar, Abo Elmatamir road, Kom Elberka, Behira, Egypt</p></div>
+        </div>
+        <div class="contact-father">
+            <div class="phone"><img src="icon/telephone-call.png"></div>
+            <div class="phone-info"><p>(+20) 122 1812 783  (+20) 111 3999 150</p></div>
+        </div>
+        <div class="contact-father">
+            <div class="telephone"><img src="icon/telephone.png"></div>
+            <div class="telephone-info"><p>0452594011</p></div>
+        </div>
+        <div class="contact-father">
+            <div class="mail"><img src="icon/email.png"></div>
+            <div class="mail-info"><p>info@agrogreenalex.com</p></div>
+        </div>
+    </div>
+</main>
+    <button class="open-button" onclick="openForm()">Chat</button>
+      
+      <div class="chat-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+          <h1>Chat</h1>
+      
+          <label for="msg"><b>Message</b></label>
+          <textarea placeholder="Type message.." name="msg" required></textarea>
+      
+          <button type="submit" class="btn">Send</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+      
+      <script>
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+      
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+      </script>
+      <script src="bootstrap5.1.3.js"></script>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.6673440840896!2d30.088707916979466!3d31.077832737434253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5e124950f39fb%3A0x80f0231faec15f99!2zQWdybyBHcmVlbiBGb3IgVHJhZGUsRXhwb3J0JkZvb2QgUHJvY2Vzc2luZy7YtNix2YPYqSDYp9is2LHZiCDYrNix2YrZhiDZhNmE2KrYrNin2LHYqSDZiNin2YTYqti12K_ZitixINmI2KfZhNi12YbYp9i52KfYqiDYp9mE2LrYsNin2YnZlNmK2Kk!5e1!3m2!1sar!2seg!4v1664805719486!5m2!1sar!2seg" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></body>
+</html>

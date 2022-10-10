@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Green Alex</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="bootstrap5.1.3.css">
+    <link rel="stylesheet" href="slids.css">
+  
+    <link rel="icon" href="logo.jpg">
+    <link rel="apple-touch-icon" href="logo.jpg" />
+    
+</head>
+<body>
+  <nav class="navbar navbar-expand-xl navbar-light bg-gradient" style="background-color:white ;" >
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img src="logo.jpg" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-success" aria-current="page" href="index.html">Home</a>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Our products
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Frozen</a></li>
+              <li><a class="dropdown-item" href="#">In brine</a></li>
+              <li><a class="dropdown-item" href="#">Fresh</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Galary</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact-us.html">Contact us</a>
+          </li>
+        </ul>    
+      </div>
+    </div>
+  </nav>
+  <script src="bootstrap5.1.3.js"></script>    
+<main>
+    <div class="slids-container">
+        <div class="mySlides">
+          <div class="numbertext"></div>
+          <img class="matrial-img" src="matrial/1.jpg">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext"></div>
+          <img class="matrial-img" src="matrial/2.jpg">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext"></div>
+          <img class="matrial-img" src="matrial/3.jpg">
+        </div>
+          
+        <div class="mySlides">
+          <div class="numbertext"></div>
+          <img class="matrial-img" src="matrial/4.jpg">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext"></div>
+            <img class="matrial-img" src="matrial/5.jpg">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext"></div>
+            <img class="matrial-img" src="matrial/6.jpg">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext"></div>
+            <img class="matrial-img" src="matrial/7.jpg">
+          </div>
+
+        
+          
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+      
+        <div class="row-slids">
+          <div class="column">
+            <img class="demo cursor" src="matrial/1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Artichoke">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="matrial/2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Strawberry">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="matrial/3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Grean Peas">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="matrial/4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Molokhia">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="matrial/5.jpg" style="width:100%" onclick="currentSlide(5)" alt="brokle">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="matrial/6.jpg" style="width:100%" onclick="currentSlide(6)" alt="spinach">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="matrial/7.jpg" style="width:100%" onclick="currentSlide(7)" alt="OKRA">
+          </div>
+          
+        </div>
+      </div>
+      
+      <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+      }
+      </script>      
+     <!-- <button class="open-button" onclick="openForm()">Chat</button>
+      
+      <div class="chat-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+          <h1>Chat</h1>
+      
+          <label for="msg"><b>Message</b></label>
+          <textarea placeholder="Type message.." name="msg" required></textarea>
+      
+          <button type="submit" class="btn">Send</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+      
+      <script>
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+      
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+      </script--> 
+      </main>
+      <footer>
+      <div class="anmi-container">
+        <div class="anmi-1">
+          <h1 id="anmi-desc" >Why Agro Green?</h1>
+        </div>
+      </div>
+      <div class="container-about-row-1">
+      <div class="container-about1">
+          <div class="about1"> <img src="icon/shield.jpg" height="auto" width="100%" > </div>
+          <div class="elementor-image-box-content">
+            <h4 ><a href="#" class="quality">Quality</a></h4>
+            <p class="elementor-image-box-description">
+                We assure you the highest quality of agricultural products in the market that complies with the food industry'sinternational standards.
+              </p>
+                </div>
+      </div>
+      <div class="container-about2">
+          <div class="about2"><img src="icon/equalizer.png" height="auto" width="100%"></div>
+          <div class="elementor-image-box-content">
+            <h4 ><a href="#" class="quality">Effectiveness</a></h4>
+            <p class="elementor-image-box-description">
+              Our products are well packed and quality controlled on the sorting, sizing and packing to maximize shelf-life.</p>
+                </div>
+      </div >
+    </div>
+    <div class="container-about-row-1">
+         <div class="container-about3">
+          <div class="about3"><img src="icon/reliability.jpg" height="auto" width="100%"></div>
+          <div class="elementor-image-box-content">
+            <h4 ><a href="#" class="quality">Reliability</a></h4>
+            <p class="elementor-image-box-description">
+              We provide you with a quick and accurate worldwide shipping</p>
+                </div>
+    </div>
+    <div class="container-about4">
+    <div class="about4"><img src="icon/select.jpg" height="auto" width="100%"></div>
+    <div class="elementor-image-box-content">
+      <h4 ><a href="#" class="quality">
+        Selection</a></h4>
+      <p class="elementor-image-box-description">
+        Our local farms produce the finest fruits and vegetables.</p>
+          </div>
+</div>
+</div>
+     </footer>
+     <div class="anmi-container">
+      <div class="anmi-1">
+        <h1 id="anmi-desc" >CERTIFICATS</h1>
+      </div>
+    </div>
+      <footer class="certi-main-container">
+        
+        <main>
+          <div class="slids-container2">
+              <div class="mySlides2">
+                <div class="numbertext"></div>
+                <img class="matrial-img2" src="serti/BRCGS.png" style="height:100px ; width:100% ;">
+              </div>
+            
+              <div class="mySlides2">
+                <div class="numbertext"></div>
+                <img class="matrial-img2" src="serti/ISO-14001.png">
+              </div>
+            
+              <div class="mySlides2">
+                <div class="numbertext"></div>
+                <img class="matrial-img2" src="serti/ISO-22000.png">
+              </div>
+                
+              <div class="mySlides2">
+                <div class="numbertext"></div>
+                <img class="matrial-img2" src="serti/iso-45001.jpg">
+              </div>
+              <div class="mySlides2">
+                  <div class="numbertext"></div>
+                  <img class="matrial-img2" src="serti/Global-GAP.png">
+                </div>
+                <div class="mySlides2">
+                  <div class="numbertext"></div>
+                  <img class="matrial-img2" src="serti/kosher.png">
+                </div>
+
+                
+              <a class="prev2" onclick="plusSlides2 (-1)">❮</a>
+              <a class="next2" onclick="plusSlides2(1)">❯</a>
+            
+             
+            
+              
+            </div>
+            
+          <script>
+            let slideIndex2 = 1;
+            showSlides2(slideIndex2);
+            
+            function plusSlides2(n) {
+              showSlides2(slideIndex2 += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides2(slideIndex2 = n);
+            }
+            
+            function showSlides2(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides2");
+              let dots = document.getElementsByClassName("demo2");
+              let captionText = document.getElementById("caption");
+              if (n > slides.length) {slideIndex2 = 1}
+              if (n < 1) {slideIndex2 = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active2", "");
+              }
+              slides[slideIndex2-1].style.display = "block";
+              dots[slideIndex2-1].className += " active2";
+              captionText.innerHTML = dots[slideIndex2-1].alt;
+            }
+            </script>      
+        
+      </footer>
+      <footer>
+        <div class="d-c">
+          <div class="down-catalogue-cap">
+          <h1 class="down-catalogue">Download our Catalogue</h1>
+        </div>
+         
+        <div>
+          <a class="catalogue" href="Catalogue.pdf" target="_blank">DOWNLOAD</a>
+        </div>
+        </div>
+      </footer>
+</body>
+</html>

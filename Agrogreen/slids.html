@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="slids.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+          <div class="slids">
+          <div class="slids-no">1 / 4</div>
+          <img src="1.jpg">
+          </div>
+              <div class="slids">
+          <div class="slids-no">2 / 4</div>
+          <img src="2.jpg">
+          </div>
+          <div class="slids">
+          <div class="slids-no">3 / 4</div>
+          <img src="3.jpg">
+          </div>
+          <div class="slids">
+          <div class="slids-no">4 / 4</div>
+          <img src="4.jpg">
+          </div>
+      <a class="prev" onclick="plusSlids(-1)"> &#10094;</a>
+      <a class="prev" onclick="plusSlids(1)">&#10095;</a>
+      <div class="caption-container">
+          <p id="caption"></p>
+          <div class="row">
+              <div class="column">
+                <img class="demo cursor" src="1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Artichoke">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Strawberry">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Grean Peas">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Molokhia">
+              </div>
+            </div>
+          </div>
+          <script>
+            let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("slides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+          </script>
+</body>
+</html>
